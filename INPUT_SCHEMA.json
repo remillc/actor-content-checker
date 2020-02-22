@@ -25,6 +25,12 @@
             "editor": "textfield",
             "prefill": ".change-log ul:nth-of-type(1)"
         },
+        "wait": {
+            "title": "Time to wait before screenshot",
+            "type": "number",
+            "description": "Time to wait after the 'load' event before starting working",
+            "prefill": 5000
+        },
         "sendNotificationTo": {
             "title": "Email address",
             "type": "string",
