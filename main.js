@@ -48,11 +48,11 @@ Apify.main(async () => {
     console.log(`Opening URL: ${input.url}`);  
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
-    await page.goto(input.url, {waitUntil: 'networkidle2'});
+    await page.goto(input.url, {waitUntil: 'load'});
 
     // wait 5 seconds (if there is some dynamic content)
     console.log(`Sleeping 5s ...`);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, input.wait));
     
     // Store a screenshot
     console.log('Saving screenshot...');
