@@ -27,7 +27,7 @@
         },
         "wait": {
             "title": "Time to wait before screenshot",
-            "type": "number",
+            "type": "integer",
             "description": "Time to wait after the 'load' event before starting working",
             "prefill": 5000
         },
